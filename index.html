@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potluck Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="eventTitleDisplay">Create Your Potluck Event</h1>
+    </header>
+
+    <!-- Event creation form (first step) -->
+    <section id="create-event">
+        <h2>Create Event</h2>
+        <form id="createEventForm">
+            <label>Title: <input type="text" id="eventTitle" required></label>
+            <label>Date: <input type="date" id="eventDate" required></label>
+            <label>Time: <input type="time" id="eventTime" required></label>
+            <label>Place: <input type="text" id="eventPlace" required></label>
+            <button type="submit">Create Event</button>
+        </form>
+    </section>
+
+    <!-- Categories and items section (second step, hidden initially) -->
+    <section id="categories-items" class="hidden">
+        <h2>Categories and Items</h2>
+        <form id="addItemsForm">
+            <label>Category: <input type="text" id="categoryName" placeholder="e.g., Drinks, Desserts" required></label>
+            <label>Item: <input type="text" id="itemName" placeholder="e.g., Chips, Cookies" required></label>
+            <button type="submit">Add Item</button>
+        </form>
+
+        <!-- Display list of categories and items like a to-do list -->
+        <div id="itemList">
+            <h3>Items List</h3>
+            <ul id="itemsDisplay"></ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
